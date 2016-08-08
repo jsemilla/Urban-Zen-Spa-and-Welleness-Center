@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>myCORNERgroove</title>
+  <meta name="description" content="myCORNERgroove, Slow smooth music, Relaxing music to remove stress">
+  <meta name="keywords" content="">
+  <meta name="author" content="Jaime Semilla">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="godgavemeyou.js"></script>
+                             
+
+  <style>
+      #artist1 { color:white;
+                 border:  5px #000099 solid;
+                 background-color:  #0000cc;
+                 text-align: center;
+                 border-radius: 10px;
+ 
+               }
+      
+      .panel1 {
+                 padding: 40px;
+                 /*height:1055px;*/
+                 text-align: center;
+                 background-color:  #0000cc;
+                 border: solid 15px #000099;
+                 color: white;
+                 border-radius: 25px;
+              }
+      
+      #songlist  { color:orange;}
+     
+      #grad1  {
+                background: #000033; /* For browsers that do not support gradients */
+                /* For Opera 11.1 to 12.0 */
+                background: -webkit-linear-gradient(left, #000066, #000033);
+                /* For Firefox 3.6 to 15 */
+                background: -o-linear-gradient(left, #000066, #000033);
+                /* Standard syntax (must be last) */
+                background: linear-gradient(to right, #000066, #000033); /* For Safari 5.1 to 6.0 */
+              }
+              
+      .affix {
+                top: 0;
+                width: 100%;
+             }
+
+      .affix + .container-fluid {
+                padding-top: 70px;
+             }
+          
+     footer {
+              background-color: black;
+              color: white;
+              text-align:center;
+              padding:10px;
+     }     
+     
+     
+              
+  </style>
+</head>
+    
+    
+<body id="grad1">
+
+<div id="grad1" class="container-fluid" data-spy="affix" data-offset-top="1" style="text-align: right; color:orange; height:95px; z-index:10000;">
+     <h3><sup>myCORNERgroove</sup></h3>
+     <a  href="#" data-toggle="popover" data-content="Its that time of the day, to grab your favorite drink,
+                                                     to sit and listen to selected smooth soul music intended to rest your body and soul
+                                                     after a hard day. let this site help you attain that internal quiteness, just select any 
+                                                     song from the list or play everything, and you can sing-along too. May you have a relaxing time, enjoy"
+     data-trigger="focus" data-placement="right">
+     <i class="fa fa-info-circle" style="float:left; background-color:#000066; border:0;  font-size:20px; color:white; "></i></a>
+     <br><sup><hr style="clear: left"></sup>
+</div>
+
+<!-- 
+  <a href="#" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Toggle popover</a>
+-->
+
+<!-- Songs -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6">
+            <p id="artist1">Select your song:</p>
+    
+            <div id="playoption">
+                <a href="test audio jquery2.htm" style="background-color:#000066; border:0;" id="PlayallsongsID" title="Play list">
+                <i class="fa fa-indent" style="font-size:20px; color:white; ">&nbspPlay list</i></a>
+                &nbsp
+                <!--
+                <button style="background-color:#000066; border:0;" id="pausesong" onclick="pauseplaylist()" type="button" title="Pause the music">
+                <i class="fa fa-pause" style="font-size:15px; color:white; "></i></button>
+                &nbsp
+                -->
+                <button style="background-color:#000066; border:0;" id="stopallsongs" onclick="stoplist()" type="button" title="Stop the music">
+                <i class="fa fa-stop" style="font-size:20px; color:white; ">&nbspStop</i></button>
+            </div><sup><hr></sup>
+       
+        
+            <!-- piano2-Audacity1.2.5.mp3 God gave me you.mp3
+
+            ul li a {display: block;background:none ;padding: 15px 10px 1px 5px;text-decoration: none;
+             white-space: nowrap;color: black;}
+
+            -->
+        
+            <div id="songlist">
+                <audio loop class="songs" src="C:\Users\jedse_000\Music\lionel_richie_truly.mp3" id="song0" volume="0.1" style="display: none;"></audio>
+                <img src="lionel richie.jpg" width="40" height="40" style="float:left; background-color:#000066; border:0;">
+                <a href="#" style="color:orange; display: block; white-space:nowrap; block; text-decoration: none; " id="show" onclick="playjuncture(0,1,0)">&nbsp&nbspTruly</a>
+                <sub><hr></sub>
+   
+                <audio loop class="songs" src="C:\Users\jedse_000\Music\Wala_Na_Bang_Pag-ibig_-_Jaya_(with_Lyrics).mp3" id="song1" volume="0.1" style="display: none;"></audio>
+                <img src="jaya.jpg" width="40" height="40" style="float:left; background-color:#000066; border:0;">
+                <a href="#" style="color:orange; display: block; white-space:nowrap; block; text-decoration: none; " id="show" onclick="playjuncture(1,1,0)">&nbsp&nbspWala nabang pag-ibig</a>
+                <sub><hr></sub>
+   
+                <audio loop class="songs" src="C:\Users\jedse_000\Music\richard_reynoso_paminsanminsan.mp3" id="song2" volume="0.1" style="display: none;"></audio>
+                <img src="richard raynoso.jpg" width="40" height="40" style="float:left; background-color:#000066; border:0;">
+                <a href="#" style="color:orange; display: block; white-space:nowrap; block; text-decoration: none; " id="show" onclick="playjuncture(2,1,0)">&nbsp&nbspPaminsan minsan</a>
+                <sub><hr></sub>
+                
+                <audio loop class="songs" src="C:\Users\jedse_000\Music\God gave me you.mp3" id="song3" volume="0.1" style="display: none;"></audio>
+                <img src="Bryan White.jpg" width="40" height="40" style="float:left; background-color:#000066; border:0;">
+                <a href="#" style="color:orange; display: block; white-space:nowrap; block; text-decoration: none; " id="show" onclick="playjuncture(3,1,0)">&nbsp&nbspGod gave me you</a>
+                <sub><hr></sub>
+           
+                <audio loop class="songs" src="C:\Users\jedse_000\Music\You_Are_So_Beautiful_-_Joe_Cocker.mp3" id="song4" volume="0.1" style="display: none;"></audio>
+                <img src="Joe-Cocker.jpg" width="40" height="40" style="float:left; background-color:#000066; border:0;">
+                <a href="#" style="color:orange; display: block; white-space:nowrap; block; text-decoration: none; " id="show" onclick="playjuncture(4,1,0)">&nbsp&nbspYou are so beautiful</a>
+                <sub><hr></sub>
+           
+                <audio loop class="songs" src="C:\Users\jedse_000\Music\Iron & Wine - Flightless Bird, American Mouth.mp3" id="song5" volume="0.1" style="display: none;"></audio>
+                <img src="Iron&Wine.jpg" width="40" height="40" style="float:left; background-color:#000066; border:0;">
+                <a href="#" style="color:orange; display: block; white-space:nowrap; block; text-decoration: none; " id="show" onclick="playjuncture(5,1,0)">&nbsp&nbspFlightLess bird</a>
+                <sub><hr></sub>
+     
+                <audio loop class="songs" src="C:\Users\jedse_000\Music\toto_i_ll_be_over_you.mp3" id="song6" volume="0.1" style="display: none;"></audio>
+                <img src="toto.jpg" width="40" height="40" style="float:left; background-color:#000066; border:0;">
+                <a href="#" style="color:orange; display: block; white-space:nowrap; block; text-decoration: none; " id="show" onclick="playjuncture(6,1,0)">&nbsp&nbspI'll be over you</a>
+                <sub><hr></sub>
+            </div>    
+        </div>
+        
+        
+        <div class="col-sm-6">
+            <div class="panel1">
+                <!-- get the Lyrics -->
+                <p id="God gave me you"><i class="fa fa-music" style="font-size:30px; color:white; "></i></p>
+            </div>
+        </div>
+    </div>    
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <footer>
+            <p>myCORNERgroove Designed and developed 2016 ijaisem.com</p> 
+        </footer>    
+        
+        <!-- <div class="col-sm-12" style="background-color: black; color:white; text-align:center; height:60px;">
+            <p>myCORNERgroove Designed and developed 2016 ijaisem.com</p>
+        </div>-->
+    </div>
+</div>                    
+
+<script>
+        $(document).ready(function(){
+            $('[data-toggle="popover"]').popover();
+        });
+        
+        
+        function playjuncture(x,y,v){
+            /*alert("hello");*/
+            if(typeof(Storage) !== "undefined") {
+              /* alert("sessionStorage.mode="+sessionStorage.mode+" ssxx="+sessionStorage.xx+" cameback="+sessionStorage.cameback);*/
+        
+              if (sessionStorage.cameback=="yes"){
+                  sessionStorage.xx = 'Any';
+                  sessionStorage.cameback = "No";
+              }
+      
+              if (sessionStorage.xx ===  undefined || sessionStorage.xx == 'Any') {
+                  sessionStorage.xx = x;
+                  sessionStorage.mode = 'pause';
+              } else { 
+                       if (sessionStorage.xx != x) {
+                           /* alert("ssxx="+sessionStorage.xx+" x="+x)*/
+                           sessionStorage.xx = x;
+                           sessionStorage.mode = 'pause';
+                       }
+              }
+              
+              
+              if (sessionStorage.mode ===  undefined || sessionStorage.mode == 'pause') {
+                  sessionStorage.mode = 'play';
+                  playAudio(x,y,v);
+              }
+              
+              else {  
+                     if (sessionStorage.mode == 'play') {
+                         sessionStorage.mode = 'pause';
+                         pauseAudio(x,2);  
+                     } 
+              
+              }
+            }    
+        }
+   
+  
+        function playAudio(x,y,v) {
+                 pauseAudio(x,y);
+                 displayartistdata(x);
+                 playselectsong(x);
+        }    
+
+        
+        
+        function playselectsong(x) {
+            $(document).ready(function(){
+                $("#song"+x)[0].play();
+            })
+        }
+        
+        function pauseplaylist() {
+            $("audio").each(function(){
+                this.pause();
+            });
+        }
+        
+        function pauseAudio(x,y) {
+            if(typeof(Storage) !== "undefined") {
+                  /*alert("1 initial value sessionStorage.valueofx1="+sessionStorage.valueofx1+"  value of x="+x);*/
+               /*alert("pauseAudio() selection="+sessionStorage.mode+" x="+x+" y="+y)*/
+              /* if (sessionStorage.mode=='selection') {*/ 
+                  
+                  if (sessionStorage.valueofx1 != x) {
+                    /*alert("2 initial value sessionStorage.valueofx1="+sessionStorage.valueofx1+"  value of x="+x);*/
+                      $(document).ready(function(){
+                        if (sessionStorage.valueofx1 === undefined) {
+                            /*alert("3  sessionStorage.valueofx1 === undefined"+sessionStorage.valueofx1);*/
+                        } else {
+                                /*alert("1  #song"+sessionStorage.valueofx1);*/
+                                if (y== 1 ) {
+                                    $("#song"+sessionStorage.valueofx1)[0].pause();
+                                    /*$("#song"+sessionStorage.valueofx1)[0].currentTime = 0;*/
+                                }    
+                        }        
+                      })
+                        if (y == 1) {
+                            sessionStorage.valueofx1 = x; 
+                        }  
+                        /*alert("4  sessionStorage.valueofx1="+sessionStorage.valueofx1+" value y="+y);*/
+                  } else {
+                          $(document).ready(function(){
+                            $("#song"+x)[0].pause();
+                            /*$("#song"+sessionStorage.valueofx1)[0].currentTime = 0;*/
+                          })        
+                  }
+              /* }*/
+            
+            } else { 
+                    document.getElementById("artist1").innerHTML = "Sorry, your browser does not support web storage...";
+            }
+          
+            /*alert("x="+x+" valueofx1="+sessionStorage.valueofx1   );*/
+        }    
+       
+   
+        function stoplist() {
+            $("audio").each(function(){
+                this.pause();
+                this.currentTime = 0; 
+            });
+            
+            if(typeof(Storage) !== "undefined") {
+                sessionStorage.xx = 'Any';
+               /* alert("stop ssxx="+sessionStorage.xx)*/
+            }
+            
+        }
+   
+</script>
+
+
+</body>
+</html>
